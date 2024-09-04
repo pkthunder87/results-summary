@@ -1,3 +1,93 @@
 /* =============
-   Header
+   Results
    ============= */
+:root {
+  // Colors
+
+  // Primary
+
+  --color-red: 0deg, 100%, 67%;
+  --color-orange: 39deg, 100%, 56%;
+  --color-teal: 166deg, 100%, 37%;
+  --color-cobalt: 234deg, 85%, 45%;
+
+  // Gradients
+
+  --color-bg-slate-blue: 252deg, 100%, 67%;
+  --color-bg-royal-blue: 241deg, 81%, 54%;
+  --color-circle-violet: hsla(256, 72%, 46%, 1);
+  --color-circle-persian: hsla(241, 72%, 46%, 0);
+
+  // Neutral
+
+  --color-white: 0deg, 0%, 100%;
+  --color-pale-blue: 221deg, 100%, 96%;
+  --color-grey-blue: 224deg, 30%, 27%;
+  --color-lavender: 241deg, 100%, 89%;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 2rem;
+
+  padding-inline: 16vw;
+  padding-block: 2em;
+
+  background: linear-gradient(
+    hsla(var(--color-bg-royal-blue), 0.9) 95%,
+    hsl(var(--color-bg-slate-blue))
+  );
+
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+
+  color: hsl(var(--color-white));
+
+  &__title {
+    color: hsla(var(--color-lavender), 0.89);
+    font-size: 1.5rem;
+
+    font-weight: 700;
+  }
+
+  &__circle {
+    background: linear-gradient(
+      to top,
+      var(--color-circle-persian) 8%,
+      var(--color-circle-violet)
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+  }
+
+  &__score {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  &__of {
+    color: hsla(var(--color-lavender), 0.5);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__eval {
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    color: hsla(var(--color-lavender), 0.7);
+  }
+}

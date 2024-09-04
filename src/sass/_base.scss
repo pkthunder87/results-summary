@@ -13,24 +13,24 @@ Also made some adjustments for my own needs
 
   // Primary
 
-  --color-red: hsl(0, 100%, 67%);
-  --color-orange: hsl(39, 100%, 56%);
-  --color-teal: hsl(166, 100%, 37%);
-  --color-cobalt: hsl(234, 85%, 45%);
+  --color-red: 0deg, 100%, 67%;
+  --color-orange: 39deg, 100%, 56%;
+  --color-teal: 166deg, 100%, 37%;
+  --color-cobalt: 234deg, 85%, 45%;
 
   // Gradients
 
-  --color-bg-slate-blue: hsl(252, 100%, 67%);
-  --color-bg-royal-blue: hsl(241, 81%, 54%);
+  --color-bg-slate-blue: 252deg, 100%, 67%;
+  --color-bg-royal-blue: 241deg, 81%, 54%;
   --color-circle-violet: hsla(256, 72%, 46%, 1);
   --color-circle-persian: hsla(241, 72%, 46%, 0);
 
   // Neutral
 
-  --color-white: hsl(0, 0%, 100%);
-  --color-pale-blue: hsl(221, 100%, 96%);
-  --color-lavender: hsl(241, 100%, 89%);
-  --color-grey-blue: hsl(224, 30%, 27%);
+  --color-white: 0deg, 0%, 100%;
+  --color-pale-blue: 221deg, 100%, 96%;
+  --color-grey-blue: 224deg, 30%, 27%;
+  --color-lavender: 241deg, 100%, 89%;
 }
 
 /* Box sizing rules */
@@ -76,9 +76,9 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 1.8rem;
-  color: var(--color-grey-blue);
+  color: hsl(var(--color-grey-blue));
 
-  background: var(--color-white);
+  background: hsl(var(--color-white));
 }
 
 /* Remove list styles */
