@@ -1,6 +1,7 @@
-/* =============
-   Results
-   ============= */
+/* =================
+   Custom Properties
+   ================= */
+
 :root {
   // Colors
 
@@ -24,7 +25,14 @@
   --color-pale-blue: 221deg, 100%, 96%;
   --color-grey-blue: 224deg, 30%, 27%;
   --color-lavender: 241deg, 100%, 89%;
+
+  // Opacity
+  --test-opacity: 0.05;
 }
+
+/* =============
+   Results
+   ============= */
 
 .results {
   display: flex;
@@ -89,5 +97,136 @@
   &__text {
     font-size: 1.2rem;
     color: hsla(var(--color-lavender), 0.7);
+  }
+}
+
+/* =============
+   Summary
+   ============= */
+
+.summary {
+  padding-inline: 7vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(var(--color-grey-blue));
+
+  &__title {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  // :nth-child(2) {
+  //   margin-block-start: 0.5rem;
+  // }
+
+  /* =============
+   Test
+   ============= */
+  .test {
+    display: flex;
+    background: hsl(var(--color-orange));
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    justify-content: space-between;
+
+    // From Jiří Thiemel
+    // https://codepen.io/ThiemelJiri/post/3-css-border-in-corners-techniques
+    padding: 1em;
+    border: 2px solid rgba(128, 128, 128, 0.112);
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: hsl(var(--color-red), var(--test-opacity));
+    }
+
+    &::before {
+      top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+      bottom: -0.3em;
+      left: 12px;
+      right: 12px;
+
+      z-index: 1;
+    }
+
+    &::after {
+      left: -0.3em;
+      right: -0.3em;
+      top: 8px;
+      bottom: 8px;
+      z-index: -1;
+    }
+
+    &__left {
+      display: flex;
+      gap: 16px;
+      text-transform: capitalize;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__right {
+      display: flex;
+      gap: 6px;
+      position: relative;
+      z-index: 2;
+
+      .test__divider {
+        margin-inline-start: 0.3rem;
+      }
+
+      .test__divider,
+      .test__of-100 {
+        color: gray;
+      }
+    }
+
+    .test__name {
+      font-size: 1.1rem;
+    }
+
+    &--reaction {
+      margin-block-start: 0.5rem;
+      background-color: hsla(var(--color-red), var(--test-opacity));
+
+      .test__name {
+        color: hsl(var(--color-red));
+      }
+    }
+
+    &--memory {
+      background-color: hsla(var(--color-orange), var(--test-opacity));
+
+      .test__name {
+        color: hsl(var(--color-orange));
+      }
+    }
+
+    &--verbal {
+      background-color: hsla(var(--color-teal), var(--test-opacity));
+
+      .test__name {
+        color: hsl(var(--color-teal));
+      }
+    }
+
+    &--visual {
+      background-color: hsla(var(--color-lavender), 0.2);
+
+      .test__name {
+        color: hsl(var(--color-cobalt));
+      }
+    }
+  }
+
+  .button {
+    margin-block-start: 0.5rem;
   }
 }
