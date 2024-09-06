@@ -118,65 +118,40 @@
     font-size: 1.2rem;
   }
 
-  // :nth-child(2) {
-  //   margin-block-start: 0.5rem;
-  // }
-
   /* =============
    Test
    ============= */
   .test {
     display: flex;
-    background: hsl(var(--color-orange));
     align-items: center;
-    padding: 1rem;
     border-radius: 12px;
     justify-content: space-between;
+    min-height: 4rem;
 
-    // From Jiří Thiemel
-    // https://codepen.io/ThiemelJiri/post/3-css-border-in-corners-techniques
-    padding: 1em;
-    border: 2px solid rgba(128, 128, 128, 0.112);
-    position: relative;
+    // Borders corner only by  Temani Afif: https://css-tip.com/corner-only-border-image/
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      background: hsl(var(--color-red), var(--test-opacity));
-    }
+    --s: 14px; /* the size on the corner */
+    --t: 1px; /* the thickness of the border */
+    --g: 0px; /* the gap between the border and image */
 
-    &::before {
-      top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
-      bottom: -0.3em;
-      left: 12px;
-      right: 12px;
-
-      z-index: 1;
-    }
-
-    &::after {
-      left: -0.3em;
-      right: -0.3em;
-      top: 8px;
-      bottom: 8px;
-      z-index: -1;
-    }
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid rgba(128, 128, 128, 0.2); /* the color here */
+    outline-offset: calc(-1 * var(--t));
+    mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+        calc(100% - var(--s)) calc(100% - var(--s)),
+      linear-gradient(#000 0 0) content-box;
 
     &__left {
       display: flex;
       gap: 16px;
       text-transform: capitalize;
-      position: relative;
-      z-index: 2;
+      padding-inline-start: 1rem;
     }
 
     &__right {
       display: flex;
       gap: 6px;
-      position: relative;
-      z-index: 2;
+      padding-inline-end: 1rem;
 
       .test__divider {
         margin-inline-start: 0.3rem;
@@ -184,7 +159,7 @@
 
       .test__divider,
       .test__of-100 {
-        color: gray;
+        color: rgba(128, 128, 128, 0.7);
       }
     }
 
@@ -228,5 +203,32 @@
 
   .button {
     margin-block-start: 0.5rem;
+    background: hsl(var(--color-grey-blue));
+    color: hsl(var(--color-white));
+    padding: 0.7em 2em;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 200px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background: linear-gradient(
+        hsla(var(--color-bg-royal-blue), 0.9) 95%,
+        hsl(var(--color-bg-slate-blue))
+      );
+    }
   }
+}
+
+/* =============
+   Attribution
+   ============= */
+
+.attribution {
+  margin-bottom: 0.8em;
 }

@@ -1,5 +1,9 @@
 function Button() {
-  return <div className="button">Button</div>;
+  return (
+    <a href="#" className="button">
+      Button
+    </a>
+  );
 }
 
 export default Button;
