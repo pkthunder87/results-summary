@@ -8,7 +8,7 @@ function Results() {
 
   return (
     <section className="results">
-      <h2 className="results__title">Your Results</h2>
+      <h2 className="results__title">Your Result</h2>
       <div className="results__circle">
         <h3 className="results__score">{totalScore}</h3>
         <p className="results__of">of 100</p>
