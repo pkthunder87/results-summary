@@ -1,12 +1,14 @@
-/* =============
-   Start of reset 
-   ============= */
+/* ===========================
+   ToC 
 
-/* 
-A reset by:
-https://piccalil.li/blog/a-more-modern-css-reset/
-Also made some adjustments for my own needs  
-*/
+   1. Custom Properties 
+   2. Reset
+   3. 550px and Above
+   =========================== */
+
+/* ====================
+   1. Custom Properties 
+   ==================== */
 
 :root {
   // Colors
@@ -32,6 +34,15 @@ Also made some adjustments for my own needs
   --color-grey-blue: 224deg, 30%, 27%;
   --color-lavender: 241deg, 100%, 89%;
 }
+
+/* =============
+   2. Reset 
+   ============= */
+/* 
+A reset by:
+https://piccalil.li/blog/a-more-modern-css-reset/
+Also made some adjustments for my own needs  
+*/
 
 /* Box sizing rules */
 /* Remove initial margins */
@@ -103,13 +114,9 @@ select {
   font-size: inherit;
 }
 
-/* =============
-   End of reset 
-   ============= */
-
-/* ================
-   550px and Above 
-   ================ */
+/* ==================
+   3. 550px and Above 
+   ================== */
 
 @media (min-width: 550px) {
   html {
