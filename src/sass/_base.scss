@@ -2,7 +2,8 @@
    ToC 
 
    1. Custom Properties 
-   2. Reset
+   2. Phone
+   2.1 Reset
    3. 550px and Above
    =========================== */
 
@@ -114,9 +115,9 @@ select {
   font-size: inherit;
 }
 
-/* ==================
-   3. 550px and Above 
-   ================== */
+/* =======================
+   3. Tablet 550px - 900px 
+   ======================= */
 
 @media (min-width: 550px) {
   html {
@@ -128,5 +129,14 @@ select {
     justify-content: center;
     align-items: center;
     padding-inline: 5vw;
+  }
+}
+
+/* ==================
+   5. 800px and Above 
+   ================== */
+@media (min-width: 800px) {
+  body {
+    padding-inline: 9vw;
   }
 }

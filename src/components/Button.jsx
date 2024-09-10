@@ -1,7 +1,7 @@
 function Button() {
   return (
     <a href="#" className="button">
-      Button
+      Continue
     </a>
   );
 }
