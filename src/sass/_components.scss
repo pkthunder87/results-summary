@@ -1,3 +1,22 @@
+/* ===========================
+   ToC 
+
+   1.0 Phones 0 - 549px 
+   1.1 Results
+   1.2 Summary
+   1.3 Summary test
+   1.4 Test
+   1.5 Button
+   1.6 Attribution
+   2.0 Tablets 550px - 899px 
+   2.1 Results
+   2.2 Summary
+   2.3 Test
+   2.4 Button
+   2.5 Attribution
+
+   =========================== */
+
 /* =================
    Custom Properties
    ================= */
@@ -31,7 +50,7 @@
 }
 
 /* ===================
-   1. Phones 0 - 549px 
+   1.0 Phones 0 - 549px 
    =================== */
 
 /* =============
@@ -122,9 +141,9 @@
     font-size: 1.2rem;
   }
 
-  /* =============
+  /* ==============
    1.3 Summary test
-   ============= */
+   ================ */
   .summary__tests {
     display: flex;
     flex-direction: column;
@@ -132,7 +151,7 @@
     padding: 0;
   }
 
-  /* =============
+  /* ===========
    1.4 Test
    ============= */
   .test {
@@ -215,7 +234,7 @@
     }
   }
 
-  /* =============
+  /* ===========
    1.5 Button
    ============= */
 
@@ -243,16 +262,16 @@
   }
 }
 
-/* =============
+/* ===============
    1.6 Attribution
-   ============= */
+   =============== */
 
 .attribution {
   margin-bottom: 0.8em;
 }
 
 /* ========================
-   2. Tablets 550px - 899px 
+   2.0 Tablets 550px - 899px 
    ======================== */
 
 /* =============
@@ -300,7 +319,7 @@
 }
 
 /* =============
-   Summary
+   2.2 Summary
    ============= */
 .summary {
   padding-inline: 4.2vw;
@@ -314,7 +333,7 @@
 }
 
 /* =============
-   Test
+   2.3 Test
    ============= */
 
 .summary {
@@ -333,7 +352,7 @@
 }
 
 /* =============
-   Button
+   2.4 Button
    ============= */
 .summary {
   .button {
@@ -343,9 +362,9 @@
   }
 }
 
-/* =============
-   Attribution
-   ============= */
+/* ===============
+   2.5 Attribution
+   =============== */
 @media (min-width: 550px) {
   .attribution {
     position: absolute;
