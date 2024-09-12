@@ -1,14 +1,14 @@
 /* ===========================
    ToC 
 
-   1. Custom Properties 
-   2. Phone
-   2.1 Reset
-   3. 550px and Above
+   1.0 Custom Properties 
+   1.0 Phone
+   1.1 Reset
+   2.0 Tablet 550px - 900px
    =========================== */
 
 /* ====================
-   1. Custom Properties 
+   1.0 Custom Properties 
    ==================== */
 
 :root {
@@ -36,8 +36,12 @@
   --color-lavender: 241deg, 100%, 89%;
 }
 
+/* ===================
+   1.0 Phones 0 - 549px 
+   =================== */
+
 /* =============
-   2. Reset 
+   1.1 Reset 
    ============= */
 /* 
 A reset by:
@@ -116,7 +120,7 @@ select {
 }
 
 /* =======================
-   3. Tablet 550px - 900px 
+   2.0 Tablet 550px - 900px 
    ======================= */
 
 @media (min-width: 550px) {
@@ -133,7 +137,7 @@ select {
 }
 
 /* ==================
-   5. 800px and Above 
+   3.0 800px and Above 
    ================== */
 @media (min-width: 800px) {
   body {
