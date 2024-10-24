@@ -11,7 +11,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Links
 
-- Live Site URL: [Github Pages](ReplaceWithURL)
+- Live Site URL: [Netlify](https://results-sum-pkthunder.netlify.app/)
 
 ### Built with
 
